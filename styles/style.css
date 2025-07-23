@@ -75,17 +75,11 @@ main {
       background-color: var(--background-secondary);
       position: relative;
 
-      &::after {
-        content: "";
-        width: 16px;
-        height: 16px;
-        background-image: url(../assets/svg/trash.svg);
+      & > img {
         position: absolute;
-        right: calc(0px + 12px);
-
+        right: 12px;
         cursor: pointer;
       }
-
 
       & h2 {
         font: var(--paragraph);
@@ -129,8 +123,10 @@ main {
     height: 44px;
     border-radius: 12px;
     padding-inline: 40px 12px;
+
     font: var(--label);
-    
+    color: var(--always-white);
+
     & img[src*="delete"] {
       cursor: pointer;
     }
