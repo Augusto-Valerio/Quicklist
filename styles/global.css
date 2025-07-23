@@ -1,0 +1,13 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-family: "inter", sans-serif;
+  --title: 700 1.5rem/2rem var(--font-family);
+  --label: 600 1rem/1.25rem var(--font-family);
+  --paragraph: 500 1rem/1.25rem var(--font-family);
+  --link: 500 .875rem/1rem var(--font-family);
+} 
