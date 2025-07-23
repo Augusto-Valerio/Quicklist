@@ -119,6 +119,32 @@ main {
       }
     }
   }
+
+  & #removeItem {
+    margin-top: 36px;
+    background-color: var(--color-danger);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 44px;
+    border-radius: 12px;
+    padding-inline: 40px 12px;
+    font: var(--label);
+    
+    & img[src*="delete"] {
+      cursor: pointer;
+    }
+
+    position: relative;
+    &::before {
+      content: "";
+      background-image: url(../assets/svg/warning-circle-filled.svg);
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      left: 12px;
+    }
+  }
 }
 
 @media (min-width: 85.375em) {
