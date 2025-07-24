@@ -11,16 +11,32 @@ form.addEventListener("submit", (event) => {
 
   const itemList = document.createElement("li"); 
   itemList.classList.add("item")
+
+  // Creating the checkbox
+  const checkbox = document.createElement("input")
+  checkbox.type = "checkbox"
+  checkbox.id = "check"
   
+  // Creating the text (h2) with the input value
   const text = document.createElement("h2")
   text.textContent = inputElement.value
 
-  
-  itemList.append(text)
-  list.append(itemList)
-  inputElement.value = ""
+  // Creating the trash icon
+  const trashIcon = document.createElement("img")
+  trashIcon.src = "assets/svg/trash.svg"
+  trashIcon.alt = "trash ícon"
 
-  containerList.append(itemList)  
+  // Adding in <li>
+  itemList.append(checkbox, text, trashIcon)
+  
+  // Adding the <li> to the <ul>
+  list.append(itemList)
+  
+  // Adding the <ul> to the container-list div
+  containerList.append(itemList)
+  
+  // Clearing the input
+  inputElement.value = ""
 
   console.log(itemList)
 });
