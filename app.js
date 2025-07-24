@@ -44,6 +44,10 @@ form.addEventListener("submit", (event) => {
   trashIcon.addEventListener("click", () => {
     removeItem.style.display = "flex"
     itemList.remove()
+
+    setTimeout( () => {
+      removeItem.style.display = "none"
+    }, 3000)
   })
 
   // function to close the message
