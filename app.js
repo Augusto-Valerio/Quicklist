@@ -46,4 +46,10 @@ form.addEventListener("submit", (event) => {
     itemList.remove()
   })
 
+  // function to close the message
+  const closeWarning =  document.querySelector("#removeItem img")
+  closeWarning.addEventListener("click", () =>{
+    removeItem.style.display = "none"
+  })
+
 });
