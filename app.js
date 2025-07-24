@@ -1,6 +1,7 @@
 const form = document.querySelector("form");
 const inputElement = document.getElementById("addItem");
-
+const removeItem = document.querySelector("#removeItem")
+removeItem.style.display = "none"
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -38,5 +39,11 @@ form.addEventListener("submit", (event) => {
   // Clearing the input
   inputElement.value = ""
 
-  console.log(itemList)
+
+  // function of when clicking on the trash can, removing the item from the list
+  trashIcon.addEventListener("click", () => {
+    removeItem.style.display = "flex"
+    itemList.remove()
+  })
+
 });
